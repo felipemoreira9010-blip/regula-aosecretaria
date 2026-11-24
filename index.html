@@ -1,255 +1,272 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Central de Consultas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Consultas</title>
 
-<style>
-body{
-font-family:Arial,sans-serif;
-background:#f4f4f4;
-margin:0;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+    }
 
-header{
-background:#0052cc;
-color:white;
-padding:20px;
-text-align:center;
-}
+    header {
+      background: #0052cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-nav{
-background:#003d99;
-padding:10px;
-text-align:center;
-}
+    nav {
+      background: #003d99;
+      padding: 10px;
+      text-align: center;
+    }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:10px;
-font-weight:bold;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+    }
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:20px;
-}
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
 
-.card{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-input,select{
-width:100%;
-padding:10px;
-margin:5px 0 15px;
-}
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px;
+      box-sizing: border-box;
+    }
 
-button{
-background:#0052cc;
-color:white;
-border:none;
-padding:10px 15px;
-cursor:pointer;
-border-radius:5px;
-}
+    button {
+      background: #0052cc;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
-button:hover{
-background:#003d99;
-}
+    button:hover {
+      background: #003d99;
+    }
 
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
-}
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
 
-table th,
-table td{
-border:1px solid #ddd;
-padding:10px;
-}
+    table th,
+    table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
 
-table th{
-background:#0052cc;
-color:white;
-}
+    table th {
+      background: #0052cc;
+      color: white;
+    }
 
-footer{
-background:#003366;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:20px;
-}
-</style>
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    .voltar {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0052cc;
+    }
+  </style>
 </head>
 
 <body>
 
-<header id="inicio">
-<h1>Central de Confirmação de Consultas</h1>
-<p>Sede • Mundo Novo • Pedra Menina</p>
-</header>
+  <header id="inicio">
+    <h1>Central de Confirmação de Consultas</h1>
+    <p>Sede • Mundo Novo • Pedra Menina</p>
+  </header>
 
-<nav>
-<a href="#sede">Sede</a>
-<a href="#mundo">Mundo Novo</a>
-<a href="#pedra">Pedra Menina</a>
-<a href="#registros">Registros</a>
-</nav>
+  <nav>
+    <a href="#sede">Sede</a>
+    <a href="#mundo">Mundo Novo</a>
+    <a href="#pedra">Pedra Menina</a>
+    <a href="#registros">Registros</a>
+  </nav>
 
-<div class="container">
+  <div class="container">
 
-<div class="card" id="sede">
-<h2>Sede</h2>
+    <div class="card" id="sede">
+      <h2>🏢 Sede</h2>
 
-<input type="text" id="nomeSede" placeholder="Nome do paciente">
+      <input type="text" id="nomeSede" placeholder="Nome do paciente">
 
-<select id="statusSede">
-<option>Sim</option>
-<option>Não</option>
-</select>
+      <select id="statusSede">
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
 
-<button onclick="salvar('Sede','nomeSede','statusSede')">
-Salvar
-</button>
-</div>
+      <button onclick="salvar('Sede','nomeSede','statusSede')">
+        Salvar
+      </button>
 
-<div class="card" id="mundo">
-<h2>Mundo Novo</h2>
+      <br>
 
-<input type="text" id="nomeMundo" placeholder="Nome do paciente">
+      <a class="voltar" href="#inicio">
+        ⬆ Voltar ao início
+      </a>
+    </div>
 
-<select id="statusMundo">
-<option>Sim</option>
-<option>Não</option>
-</select>
+    <div class="card" id="mundo">
+      <h2>🏠 Mundo Novo</h2>
 
-<button onclick="salvar('Mundo Novo','nomeMundo','statusMundo')">
-Salvar
-</button>
-</div>
+      <input type="text" id="nomeMundo" placeholder="Nome do paciente">
 
-<div class="card" id="pedra">
-<h2>Pedra Menina</h2>
+      <select id="statusMundo">
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
 
-<input type="text" id="nomePedra" placeholder="Nome do paciente">
+      <button onclick="salvar('Mundo Novo','nomeMundo','statusMundo')">
+        Salvar
+      </button>
 
-<select id="statusPedra">
-<option>Sim</option>
-<option>Não</option>
-</select>
+      <br>
 
-<button onclick="salvar('Pedra Menina','nomePedra','statusPedra')">
-Salvar
-</button>
-</div>
+      <a class="voltar" href="#inicio">
+        ⬆ Voltar ao início
+      </a>
+    </div>
 
-<div class="card" id="registros">
+    <div class="card" id="pedra">
+      <h2>🏥 Pedra Menina</h2>
 
-<h2>Registros</h2>
+      <input type="text" id="nomePedra" placeholder="Nome do paciente">
 
-<button onclick="limpar()">
-Limpar Todos
-</button>
+      <select id="statusPedra">
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
 
-<table>
+      <button onclick="salvar('Pedra Menina','nomePedra','statusPedra')">
+        Salvar
+      </button>
 
-<thead>
-<tr>
-<th>Unidade</th>
-<th>Paciente</th>
-<th>Confirmou</th>
-</tr>
-</thead>
+      <br>
 
-<tbody id="lista"></tbody>
+      <a class="voltar" href="#inicio">
+        ⬆ Voltar ao início
+      </a>
+    </div>
 
-</table>
+    <div class="card" id="registros">
 
-</div>
+      <h2>📋 Registros</h2>
 
-</div>
+      <button onclick="limpar()">
+        Limpar Todos
+      </button>
 
-<footer>
-Central de Confirmação de Consultas
-</footer>
+      <table>
+        <thead>
+          <tr>
+            <th>Unidade</th>
+            <th>Paciente</th>
+            <th>Confirmou</th>
+          </tr>
+        </thead>
 
-<script>
+        <tbody id="lista">
+        </tbody>
+      </table>
 
-let registros = JSON.parse(localStorage.getItem("consultas")) || [];
+    </div>
 
-function salvar(unidade,nomeId,statusId){
+  </div>
 
-let nome =
-document.getElementById(nomeId).value;
+  <footer>
+    Central de Confirmação de Consultas
+  </footer>
 
-let status =
-document.getElementById(statusId).value;
+  <script>
 
-if(nome === ""){
-alert("Digite o nome.");
-return;
-}
+    let registros = JSON.parse(localStorage.getItem("consultas")) || [];
 
-registros.push({
-unidade: unidade,
-nome: nome,
-status: status
-});
+    function salvar(unidade, nomeId, statusId) {
 
-localStorage.setItem(
-"consultas",
-JSON.stringify(registros)
-);
+      let nome = document.getElementById(nomeId).value;
+      let status = document.getElementById(statusId).value;
 
-document.getElementById(nomeId).value="";
+      if (nome === "") {
+        alert("Digite o nome do paciente.");
+        return;
+      }
 
-mostrar();
+      registros.push({
+        unidade: unidade,
+        nome: nome,
+        status: status
+      });
 
-}
+      localStorage.setItem("consultas", JSON.stringify(registros));
 
-function mostrar(){
+      document.getElementById(nomeId).value = "";
 
-let tabela =
-document.getElementById("lista");
+      mostrar();
+    }
 
-tabela.innerHTML="";
+    function mostrar() {
 
-for(let i=0;i<registros.length;i++){
+      let tabela = document.getElementById("lista");
 
-tabela.innerHTML +=
-"<tr>" +
-"<td>"+registros[i].unidade+"</td>" +
-"<td>"+registros[i].nome+"</td>" +
-"<td>"+registros[i].status+"</td>" +
-"</tr>";
+      tabela.innerHTML = "";
 
-}
+      for (let i = 0; i < registros.length; i++) {
 
-}
+        tabela.innerHTML += `
+          <tr>
+            <td>${registros[i].unidade}</td>
+            <td>${registros[i].nome}</td>
+            <td>${registros[i].status}</td>
+          </tr>
+        `;
+      }
+    }
 
-function limpar(){
+    function limpar() {
 
-localStorage.removeItem("consultas");
+      localStorage.removeItem("consultas");
 
-registros=[];
+      registros = [];
 
-mostrar();
+      mostrar();
+    }
 
-}
+    mostrar();
 
-mostrar();
-
-</script>
+  </script>
 
 </body>
 </html>
